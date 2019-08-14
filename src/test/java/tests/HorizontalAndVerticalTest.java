@@ -59,7 +59,7 @@ public class HorizontalAndVerticalTest extends TestRunner {
         //Arrange
         CategoryPage accessoriesPage;
         String actual;
-        String expected = Category.ACCESSORIES.toString();
+        String expected = Category.АКСЕСУАРИ.toString();
 
         //Act
         accessoriesPage = homePage.clickAccessoriesButton();
