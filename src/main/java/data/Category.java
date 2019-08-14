@@ -1,7 +1,7 @@
 package data;
 
 public enum Category {
-    ACCESSORIES,
+//    ACCESSORIES,
     ART,
     CLOTHES,
     MEN,
