@@ -53,21 +53,21 @@ public class HorizontalAndVerticalTest extends TestRunner {
         Assert.assertEquals(actual, expected);
     }
 
-    @Description("checkAccessories")
-    @Test(priority = 3)
-    public void checkAccessories() throws InterruptedException {
-        //Arrange
-        CategoryPage accessoriesPage;
-        String actual;
-        String expected = Category.АКСЕСУАРИ.toString();
-
-        //Act
-        accessoriesPage = homePage.clickAccessoriesButton();
-        actual = accessoriesPage.getCategoryName();
-
-        //Assert
-        Assert.assertEquals(actual, expected);
-    }
+//    @Description("checkAccessories")
+//    @Test(priority = 3)
+//    public void checkAccessories() throws InterruptedException {
+//        //Arrange
+//        CategoryPage accessoriesPage;
+//        String actual;
+//        String expected = Category.ACCESSORIES.toString();
+//
+//        //Act
+//        accessoriesPage = homePage.clickAccessoriesButton();
+//        actual = accessoriesPage.getCategoryName();
+//
+//        //Assert
+//        Assert.assertEquals(actual, expected);
+//    }
 
     @Description("checkStationeryAccessories")
     @Test(priority = 4)
