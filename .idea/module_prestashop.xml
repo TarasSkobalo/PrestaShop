@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_prestashop" default="compile.module.prestashop">
+  <dirname property="module.prestashop.basedir" file="${ant.file.module_prestashop}"/>
+  
+  <property name="module.jdk.home.prestashop" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.prestashop" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.prestashop" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.prestashop" value="-encoding UTF-8 -source 11 -target 11 ${compiler.args}"/>
+  
+  <property name="prestashop.output.dir" value="${module.prestashop.basedir}/../out/production/prestashop"/>
+  <property name="prestashop.testoutput.dir" value="${module.prestashop.basedir}/../out/test/prestashop"/>
+  
+  <path id="prestashop.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="prestashop.module.production.classpath">
+    <path refid="${module.jdk.classpath.prestashop}"/>
+  </path>
+  
+  <path id="prestashop.runtime.production.module.classpath">
+    <pathelement location="${prestashop.output.dir}"/>
+  </path>
+  
+  <path id="prestashop.module.classpath">
+    <path refid="${module.jdk.classpath.prestashop}"/>
+    <pathelement location="${prestashop.output.dir}"/>
+  </path>
+  
+  <path id="prestashop.runtime.module.classpath">
+    <pathelement location="${prestashop.testoutput.dir}"/>
+    <pathelement location="${prestashop.output.dir}"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.prestashop">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.prestashop">
+    <patternset refid="excluded.from.module.prestashop"/>
+  </patternset>
+  
+  
+  <target name="compile.module.prestashop" depends="compile.module.prestashop.production,compile.module.prestashop.tests" description="Compile module prestashop"/>
+  
+  <target name="compile.module.prestashop.production" depends="register.custom.compilers" description="Compile module prestashop; production classes"/>
+  
+  <target name="compile.module.prestashop.tests" depends="register.custom.compilers,compile.module.prestashop.production" description="compile module prestashop; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.prestashop" description="cleanup module">
+    <delete dir="${prestashop.output.dir}"/>
+    <delete dir="${prestashop.testoutput.dir}"/>
+  </target>
+</project>

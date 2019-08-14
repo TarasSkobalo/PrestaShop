@@ -1,0 +1,6 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="prestashop:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/prestashop_jar</output-path>
+    <root id="archive" name="prestashop.jar" />
+  </artifact>
+</component>
