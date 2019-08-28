@@ -37,7 +37,7 @@ public abstract class TestRunner {
 
     @BeforeMethod
     public void beforeMethod() {
-        driver.get("http://35.225.39.45/index.php");
+        driver.get("http://35.225.39.45/index.php?id_lang=1");
     }
 
     protected HomePage loadApplication() {
