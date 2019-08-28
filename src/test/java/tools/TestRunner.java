@@ -30,7 +30,7 @@ public abstract class TestRunner {
     public void setUp() {
 //        System.setProperty("webdriver.chrome.driver", "src\\main\\resources\\chromedriver.exe");
         System.setProperty("webdriver.chrome.driver", "/usr/local/share/chromedriver");
-        driver = new ChromeDriver();
+        WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
     }
