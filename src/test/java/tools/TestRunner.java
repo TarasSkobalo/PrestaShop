@@ -32,7 +32,7 @@ public abstract class TestRunner {
         System.setProperty("webdriver.chrome.driver", "/usr/local/share/chromedriver");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
     }
 
     @BeforeMethod
